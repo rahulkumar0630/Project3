@@ -6,13 +6,13 @@
 
 class RequestQueue {
 private:
-    std::queue<Request> requests;
+    std::queue<Request> requests; //Queue for requests
 public:
-    void request_add(const Request& req);
-    Request request_pop();
-    Request request_get();
-    int size_of_queue() const; 
-    bool is_empty() const;
+    void request_add(const Request& req); //Add request to queue
+    Request request_pop(); //Remove request from Queue
+    Request request_get(); //Return information for current Request
+    int size_of_queue() const; //Return Size of Queue
+    bool is_empty() const; //Check if Queue is empty
     
 };
 

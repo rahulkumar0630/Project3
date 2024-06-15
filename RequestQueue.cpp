@@ -1,9 +1,11 @@
 #include "RequestQueue.h"
 
+//Push a request into the RequestQueue
 void RequestQueue::request_add(const Request& req) {
     requests.push(req);
 }
 
+//Get the first request in the queue and remove it
 Request RequestQueue::request_pop() {
     if (!requests.empty()) {
         Request req = requests.front();
@@ -13,6 +15,7 @@ Request RequestQueue::request_pop() {
     return {}; 
 }
 
+//Get the first request in the queue
 Request RequestQueue::request_get() {
     if (!requests.empty()) {
         Request req = requests.front();
@@ -21,11 +24,12 @@ Request RequestQueue::request_get() {
     return {}; 
 }
 
-
+//Return size of queue
 int RequestQueue::size_of_queue() const { 
     return requests.size();
 }
 
+//Return is queue is empty or not
 bool RequestQueue::is_empty() const {
     return requests.empty();
 }
